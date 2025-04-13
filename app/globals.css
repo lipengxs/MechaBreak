@@ -1,0 +1,309 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 13, 17, 23;
+  --background-end-rgb: 23, 27, 33;
+  --primary-color: 59, 130, 246;
+  --secondary-color: 99, 102, 241;
+  --accent-color: 236, 72, 153;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    )
+    fixed;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  a {
+    @apply text-blue-400 hover:text-blue-300 transition-colors;
+  }
+}
+
+@layer components {
+  .container-section {
+    @apply py-16 px-4;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-12;
+  }
+  
+  .btn-primary {
+    @apply inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply inline-block px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-medium rounded-md transition-colors;
+  }
+  
+  /* Striker Card Styles */
+  .striker-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+  
+  .striker-card {
+    @apply bg-slate-800 rounded-lg overflow-hidden transition-transform hover:transform hover:scale-105;
+  }
+  
+  .striker-image {
+    @apply relative h-64;
+  }
+  
+  .striker-type {
+    @apply text-sm font-medium text-blue-400 mb-1;
+  }
+  
+  .striker-name {
+    @apply text-xl font-bold transition-colors;
+  }
+  
+  .striker-content {
+    @apply p-4;
+  }
+  
+  .striker-stats {
+    @apply grid grid-cols-4 gap-2;
+  }
+  
+  .stat-item {
+    @apply flex flex-col items-center bg-slate-900 p-2 rounded;
+  }
+  
+  .stat-value {
+    @apply text-xl font-bold text-blue-400;
+  }
+  
+  .stat-label {
+    @apply text-xs text-gray-400;
+  }
+  
+  /* Map Styles */
+  .map-details {
+    @apply bg-slate-800 p-6 rounded-lg;
+  }
+  
+  /* Media Styles */
+  .aspect-w-16 {
+    position: relative;
+    padding-bottom: 56.25%;
+  }
+  
+  .aspect-h-9 {
+    position: relative;
+  }
+  
+  .aspect-w-16 iframe,
+  .aspect-h-9 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Countdown timer styling */
+.countdown-container {
+  @apply flex justify-center gap-4 md:gap-6 my-8;
+}
+
+.countdown-item {
+  @apply flex flex-col items-center;
+}
+
+.countdown-value {
+  @apply text-2xl md:text-4xl font-bold bg-slate-800 rounded-lg px-4 py-2 min-w-[60px] md:min-w-[80px] text-center;
+}
+
+.countdown-label {
+  @apply text-xs md:text-sm text-gray-400 mt-1;
+}
+
+/* FAQ accordion styling */
+.faq-item {
+  @apply border-b border-slate-700 py-4;
+}
+
+.faq-question {
+  @apply flex justify-between items-center w-full text-left font-semibold cursor-pointer;
+}
+
+.faq-answer {
+  @apply mt-2 text-gray-300;
+}
+
+/* Game features section */
+.feature-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.feature-item {
+  @apply flex flex-col items-center text-center p-6;
+}
+
+.feature-icon {
+  @apply text-blue-400 text-4xl mb-4;
+}
+
+/* News card styling */
+.news-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.news-card {
+  @apply bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow;
+}
+
+.news-image {
+  @apply w-full h-48 object-cover;
+}
+
+.news-content {
+  @apply p-6;
+}
+
+.news-date {
+  @apply text-sm text-gray-400 mb-2;
+}
+
+.news-title {
+  @apply text-xl font-bold mb-2 hover:text-blue-400 transition-colors;
+}
+
+.news-excerpt {
+  @apply text-gray-300;
+}
+
+/* Map section styling */
+.map-container {
+  @apply relative rounded-lg overflow-hidden my-8;
+}
+
+.map-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity;
+}
+
+.map-name {
+  @apply text-2xl font-bold;
+}
+
+/* Airdrop item styling */
+.airdrop-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.airdrop-card {
+  @apply bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow;
+}
+
+.airdrop-image {
+  @apply w-full h-48 object-cover;
+}
+
+.airdrop-content {
+  @apply p-6;
+}
+
+.airdrop-name {
+  @apply text-xl font-bold mb-2 hover:text-blue-400 transition-colors;
+}
+
+.airdrop-rarity {
+  @apply text-sm mb-2;
+}
+
+.rarity-common {
+  @apply text-gray-400;
+}
+
+.rarity-uncommon {
+  @apply text-green-400;
+}
+
+.rarity-rare {
+  @apply text-blue-400;
+}
+
+.rarity-epic {
+  @apply text-purple-400;
+}
+
+.rarity-legendary {
+  @apply text-yellow-400;
+}
+
+.airdrop-description {
+  @apply text-gray-300;
+}
+
+/* Navigation styles */
+.nav-link {
+  @apply text-gray-300 hover:text-white transition-colors cursor-pointer;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  @apply absolute top-full left-0 w-48 rounded-md bg-slate-800 shadow-lg py-1 z-10 
+  opacity-0 pointer-events-none 
+  transition-all duration-200 ease-in-out 
+  group-hover:opacity-100 group-hover:pointer-events-auto;
+  margin-top: 0;
+}
+
+.dropdown-item {
+  @apply block px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white w-full text-left;
+} 
