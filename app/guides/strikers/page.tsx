@@ -371,9 +371,7 @@ export default function Strikers() {
                 <li>Excellent team support capabilities while maintaining strong solo performance</li>
               </ul>
               
-              <Link href="/guides/strikers/falcon" className="btn-primary">
-                View Detailed Guide
-              </Link>
+              
             </div>
           </div>
         </div>

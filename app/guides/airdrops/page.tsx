@@ -13,7 +13,7 @@ const airdrops = [
     type: "Power-Up",
     rarity: "Legendary",
     description: "A highly advanced power source that significantly boosts all mecha systems for a limited time.",
-    image: "/images/airdrop-quantum-core.jpg",
+    image: "/images/airdrops/quantum-core.jpg",
     effects: [
       "Increases all stats by 30% for 60 seconds",
       "Reduces ability cooldowns by 50%",
@@ -31,7 +31,7 @@ const airdrops = [
     type: "Utility",
     rarity: "Common",
     description: "A standard-issue repair kit that restores a moderate amount of health to your mecha.",
-    image: "/images/airdrop-repair-kit.jpg",
+    image: "/images/airdrops/repair-kit.jpg",
     effects: [
       "Restores 50% of maximum health",
       "Repairs critical systems",
@@ -49,7 +49,7 @@ const airdrops = [
     type: "Offensive",
     rarity: "Rare",
     description: "A powerful electromagnetic pulse device that temporarily disables enemy mechas in its blast radius.",
-    image: "/images/airdrop-emp-bomb.jpg",
+    image: "/images/airdrops/emp-bomb.jpg",
     effects: [
       "Disables enemy mechas for 5 seconds",
       "Disrupts radar and targeting systems for 15 seconds",
@@ -67,7 +67,7 @@ const airdrops = [
     type: "Utility",
     rarity: "Epic",
     description: "An advanced cloaking device that renders your mecha temporarily invisible to enemies.",
-    image: "/images/airdrop-stealth-module.jpg",
+    image: "/images/airdrops/stealth-module.jpg",
     effects: [
       "Grants invisibility for 20 seconds",
       "Silences movement and weapon sounds",
@@ -85,7 +85,7 @@ const airdrops = [
     type: "Offensive",
     rarity: "Rare",
     description: "A powerful weapon upgrade that significantly increases your mecha's firepower for a limited time.",
-    image: "/images/airdrop-heavy-artillery.jpg",
+    image: "/images/airdrops/heavy-artillery.jpg",
     effects: [
       "Increases weapon damage by 75%",
       "Adds explosive damage to all projectiles",
@@ -103,7 +103,7 @@ const airdrops = [
     type: "Defensive",
     rarity: "Epic",
     description: "A powerful defensive system that creates an energy shield around your mecha, absorbing incoming damage.",
-    image: "/images/airdrop-shield-generator.jpg",
+    image: "/images/airdrops/shield-generator.jpg",
     effects: [
       "Creates a shield that absorbs up to 500 damage",
       "Regenerates shield at 10 points per second",
@@ -121,7 +121,7 @@ const airdrops = [
     type: "Mobility",
     rarity: "Uncommon",
     description: "A temporary engine enhancement that significantly increases your mecha's movement speed and agility.",
-    image: "/images/airdrop-speed-booster.jpg",
+    image: "/images/airdrops/speed-booster.jpg",
     effects: [
       "Increases movement speed by 50% for 30 seconds",
       "Reduces dash cooldown by 75%",
@@ -139,7 +139,7 @@ const airdrops = [
     type: "Strategic",
     rarity: "Legendary",
     description: "A highly valuable intelligence package that reveals enemy positions and provides tactical advantages.",
-    image: "/images/airdrop-data-core.jpg",
+    image: "/images/airdrops/data-core.jpg",
     effects: [
       "Reveals all enemies on the map for 45 seconds",
       "Highlights critical weak points on enemy mechas",
@@ -365,7 +365,7 @@ export default function Airdrops() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="relative h-96">
               <Image
-                src="/images/airdrop-quantum-core-featured.jpg"
+                src="/images/airdrops/quantum-core-featured.jpg"
                 alt="Quantum Core Airdrop"
                 fill
                 style={{ objectFit: 'cover' }}
@@ -402,9 +402,6 @@ export default function Airdrops() {
                 <li><strong>Power Plant:</strong> Sometimes appears near the reactor core</li>
               </ul>
               
-              <Link href="/guides/airdrops/quantum-core" className="btn-primary">
-                View Detailed Guide
-              </Link>
             </div>
           </div>
         </div>

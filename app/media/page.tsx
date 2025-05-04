@@ -9,51 +9,51 @@ import PageLayout from '../../components/layout/PageLayout';
 const mediaData = {
   videos: [
     {
-      id: "trailer-2023",
-      title: "Mecha Break - Official Cinematic Trailer 2023",
+      id: "trailer-2025",
+      title: "[PC] Mecha BREAK Play test. Falcon is Amazing!",
       date: "October 15, 2023",
-      thumbnail: "/images/video-thumbnail-trailer.jpg",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      description: "Experience the epic world of Mecha Break in this cinematic trailer showcasing the game's stunning visuals, intense combat, and rich storyline."
+      thumbnail: "/images/media/video-thumbnail-trailer.jpg",
+      embedUrl: "https://www.youtube.com/embed/ZOR6ig6GVMA?si=gh8QJuAH4HLjONgu",
+      description: "I dive into the Mecha BREAK Playtest on PC Auguest 2024. There are many different types of mechs, and Falcon is super fun to play. If you want fast pace game play, Flacon is the best for you."
     },
     {
       id: "gameplay-reveal",
       title: "Gameplay Reveal - Mecha Break Alpha",
       date: "November 5, 2023",
-      thumbnail: "/images/video-thumbnail-gameplay.jpg",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      thumbnail: "/images/media/video-thumbnail-gameplay.jpg",
+      embedUrl: "https://www.youtube.com/embed/QyCI80YKUkk?si=mZ5iOZWhFFdItjC5",
       description: "Get your first look at Mecha Break's gameplay mechanics, including mecha customization, combat systems, and multiplayer features."
     },
     {
       id: "dev-diary-1",
       title: "Developer Diary #1 - The Vision",
       date: "December 10, 2023",
-      thumbnail: "/images/video-thumbnail-dev-diary.jpg",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      thumbnail: "/images/media/video-thumbnail-dev-diary.jpg",
+      embedUrl: "https://www.youtube.com/embed/QyCI80YKUkk?si=mZ5iOZWhFFdItjC5",
       description: "The development team discusses their vision for Mecha Break, the inspiration behind the game, and their goals for creating a unique mecha combat experience."
     },
     {
       id: "striker-showcase",
       title: "Striker Showcase - Meet the Mechas",
       date: "January 20, 2024",
-      thumbnail: "/images/video-thumbnail-strikers.jpg",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      thumbnail: "/images/media/video-thumbnail-strikers.jpg",
+      embedUrl: "https://www.youtube.com/embed/QyCI80YKUkk?si=mZ5iOZWhFFdItjC5",
       description: "An in-depth look at the various Strikers (mechas) available in Mecha Break, detailing their unique abilities, strengths, and playstyles."
     },
     {
       id: "map-overview",
       title: "Map Overview - Battlefields of Mecha Break",
       date: "February 15, 2024",
-      thumbnail: "/images/video-thumbnail-maps.jpg",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      thumbnail: "/images/media/video-thumbnail-maps.jpg",
+      embedUrl: "https://www.youtube.com/embed/QyCI80YKUkk?si=mZ5iOZWhFFdItjC5",
       description: "Explore the diverse maps of Mecha Break, from futuristic cities to orbital stations, each with unique features and strategic opportunities."
     },
     {
       id: "beta-announcement",
       title: "Closed Beta Announcement",
       date: "March 1, 2024",
-      thumbnail: "/images/video-thumbnail-beta.jpg",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      thumbnail: "/images/media/video-thumbnail-beta.jpg",
+      embedUrl: "https://www.youtube.com/embed/QyCI80YKUkk?si=mZ5iOZWhFFdItjC5",
       description: "Exciting news about the upcoming closed beta test for Mecha Break, including details on how to participate and what to expect."
     }
   ],
@@ -62,49 +62,49 @@ const mediaData = {
       id: "screenshot-1",
       title: "Neo Tokyo Battle",
       description: "An intense battle in the heart of Neo Tokyo, showcasing the urban environment and destructible buildings.",
-      image: "/images/screenshot-neo-tokyo.jpg"
+      image: "/images/media/screenshot-neo-tokyo.jpg"
     },
     {
       id: "screenshot-2",
       title: "Falcon Striker in Action",
       description: "The versatile Falcon Striker unleashing its Rapid Strike ability against multiple enemies.",
-      image: "/images/screenshot-falcon.jpg"
+      image: "/images/media/screenshot-falcon.jpg"
     },
     {
       id: "screenshot-3",
       title: "Arctic Outpost Snowstorm",
       description: "Navigating through a blinding snowstorm at the Arctic Outpost map, demonstrating the game's dynamic weather system.",
-      image: "/images/screenshot-arctic.jpg"
+      image: "/images/media/screenshot-arctic.jpg"
     },
     {
       id: "screenshot-4",
       title: "Mecha Customization Interface",
       description: "A glimpse of the detailed mecha customization system, allowing players to personalize their Strikers.",
-      image: "/images/screenshot-customization.jpg"
+      image: "/images/media/screenshot-customization.jpg"
     },
     {
       id: "screenshot-5",
       title: "Orbital Station Zero-G Combat",
       description: "Unique zero-gravity combat in the Orbital Station map, showcasing the three-dimensional movement system.",
-      image: "/images/screenshot-orbital.jpg"
+      image: "/images/media/screenshot-orbital.jpg"
     },
     {
       id: "screenshot-6",
       title: "Team Battle Formation",
       description: "A coordinated team preparing for battle, highlighting the game's emphasis on teamwork and strategy.",
-      image: "/images/screenshot-team.jpg"
+      image: "/images/media/screenshot-team.jpg"
     },
     {
       id: "screenshot-7",
       title: "Canyon Ruins Vertical Combat",
       description: "Vertical combat in the Canyon Ruins map, with Strikers battling across multiple elevation levels.",
-      image: "/images/screenshot-canyon.jpg"
+      image: "/images/media/screenshot-canyon.jpg"
     },
     {
       id: "screenshot-8",
       title: "Quantum Core Airdrop",
       description: "A Striker claiming the powerful Quantum Core airdrop, surrounded by the energy field it generates.",
-      image: "/images/screenshot-airdrop.jpg"
+      image: "/images/media/screenshot-airdrop.jpg"
     }
   ],
   artwork: [
@@ -112,37 +112,37 @@ const mediaData = {
       id: "artwork-1",
       title: "Mecha Break Key Art",
       description: "Official key art for Mecha Break, featuring the flagship Falcon Striker against a futuristic cityscape.",
-      image: "/images/artwork-key-art.jpg"
+      image: "/images/media/artwork-key-art.jpg"
     },
     {
       id: "artwork-2",
       title: "Striker Concept Art - Titan",
       description: "Early concept art for the Titan Striker, showing its evolution from initial sketches to final design.",
-      image: "/images/artwork-titan-concept.jpg"
+      image: "/images/media/artwork-titan-concept.jpg"
     },
     {
       id: "artwork-3",
       title: "Neo Tokyo Environment Design",
       description: "Detailed environment design for the Neo Tokyo map, showcasing the architectural style and atmosphere.",
-      image: "/images/artwork-neo-tokyo.jpg"
+      image: "/images/media/artwork-neo-tokyo.jpg"
     },
     {
       id: "artwork-4",
       title: "Character Art - Pilots",
       description: "Character designs for the various pilots that operate the Strikers in the world of Mecha Break.",
-      image: "/images/artwork-pilots.jpg"
+      image: "/images/media/artwork-pilots.jpg"
     },
     {
       id: "artwork-5",
       title: "Weapon Systems Illustration",
       description: "Technical illustrations of various weapon systems available for Strikers, including their mechanisms and effects.",
-      image: "/images/artwork-weapons.jpg"
+      image: "/images/media/artwork-weapons.jpg"
     },
     {
       id: "artwork-6",
       title: "Mecha Break Logo Evolution",
       description: "The evolution of the Mecha Break logo from early concepts to the final design.",
-      image: "/images/artwork-logo.jpg"
+      image: "/images/media/artwork-logo.jpg"
     }
   ]
 };
@@ -299,9 +299,6 @@ export default function Media() {
             <p className="mb-6">
               Download our comprehensive media kit containing high-resolution logos, key art, character renders, and more for press and content creation purposes.
             </p>
-            <Link href="/downloads/mecha-break-media-kit.zip" className="btn-primary">
-              Download Media Kit (2.3 GB)
-            </Link>
           </div>
           
           <div className="bg-slate-900 p-6 rounded-lg">
@@ -337,7 +334,7 @@ export default function Media() {
               <div key={item} className="community-item bg-slate-800 rounded-lg overflow-hidden">
                 <div className="relative aspect-square">
                   <Image
-                    src={`/images/community-${item}.jpg`}
+                    src={`/images/media/community-${item}.jpg`}
                     alt={`Community Creation ${item}`}
                     fill
                     style={{ objectFit: 'cover' }}
@@ -349,12 +346,6 @@ export default function Media() {
                 </div>
               </div>
             ))}
-          </div>
-          
-          <div className="text-center mt-8">
-            <Link href="/community" className="btn-secondary">
-              View More Community Creations
-            </Link>
           </div>
         </div>
       </section>

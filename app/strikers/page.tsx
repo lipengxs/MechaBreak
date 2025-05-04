@@ -342,10 +342,6 @@ export default function Strikers() {
   const [modalOpen, setModalOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [initialLoading, setInitialLoading] = useState(true);
-  const [mechaDetails, setMechaDetails] = useState<any>(null);
-  // 存储所有机甲的详细数据
-  const [allMechaDetails, setAllMechaDetails] = useState<{[key: string]: Mecha}>({});
 
   // Add responsive detection
   useEffect(() => {
@@ -365,190 +361,23 @@ export default function Strikers() {
     };
   }, []);
 
-  // 预加载所有机甲的详细数据
-  useEffect(() => {
-    const preloadAllMechaDetails = async () => {
-      setInitialLoading(true);
-      
-      const mechaDetailsMap: {[key: string]: Mecha} = {};
-      
-      // 为每个机甲并行发起请求
-      const fetchPromises = mechaData.map(async (mecha) => {
-        try {
-          const apiUrl = `https://www.mechabreak.com/api.php?op=search_api&action=get_article_detail&catid=${mecha.catid}&id=${mecha.id}&callback=_xfe26`;
-          
-          const response = await fetch(apiUrl, {
-            headers: {
-              'Accept': 'application/json, text/javascript, */*; q=0.01',
-              'Referer': 'https://www.mechabreak.com/',
-              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-            }
-          });
-          
-          const text = await response.text();
-          const jsonStart = text.indexOf('(') + 1;
-          const jsonEnd = text.lastIndexOf(')');
-          
-          if (jsonStart > 0 && jsonEnd > jsonStart) {
-            const jsonString = text.substring(jsonStart, jsonEnd);
-            const data = JSON.parse(jsonString);
-            
-            if (data && data.code === 1 && data.data && data.data.length > 0) {
-              const mechaData = data.data[0];
-              
-              // 处理多行文本字段
-              const driver_basic = mechaData.driver_basic ? mechaData.driver_basic.split('\n') : [];
-              const mecha_basic = mechaData.mecha_basic ? mechaData.mecha_basic.split('\n') : [];
-              
-              // 创建增强的机甲对象
-              const enhancedMecha = {
-                ...mecha,
-                ...mechaData,
-                driver_basic_processed: driver_basic,
-                mecha_basic_processed: mecha_basic,
-                image: mecha.image || '',
-                description: mechaData.description || mecha.description
-              };
-              
-              // 存储到映射中
-              mechaDetailsMap[mecha.id] = enhancedMecha;
-              
-              console.log(`Successfully loaded details for mecha ${mecha.title} (ID: ${mecha.id})`);
-            }
-          }
-    } catch (error) {
-          console.error(`Error loading details for mecha ${mecha.title} (ID: ${mecha.id}):`, error);
-        }
-      });
-      
-      // 等待所有请求完成
-      await Promise.all(fetchPromises);
-      
-      // 更新状态
-      setAllMechaDetails(mechaDetailsMap);
-      setInitialLoading(false);
-      
-      console.log('All mecha details loaded:', Object.keys(mechaDetailsMap).length);
+  // 处理机甲选择
+  const handleMechaSelect = (mecha: Mecha) => {
+    // 处理数据字段
+    const mecha_basic_processed = mecha.mecha_basic ? mecha.mecha_basic.split('\n') : [];
+    const driver_basic_processed = mecha.driver_basic ? mecha.driver_basic.split('\n') : [];
+    
+    // 创建增强的机甲对象
+    const enhancedMecha = {
+      ...mecha,
+      mecha_basic_processed: mecha_basic_processed,
+      driver_basic_processed: driver_basic_processed,
+      // 确保保留基本显示字段
+      image: mecha.image || '',
     };
     
-    preloadAllMechaDetails();
-  }, []);
-
-  // 从预加载的数据中获取机甲详情
-  const handleMechaSelect = (mecha: Mecha) => {
-    setIsLoading(true);
-    
-    // Check if mecha already has built-in data in the local mechaData array
-    if (mecha.mecha_basic || mecha.mecha_history || mecha.weapon_1_desc || mecha.driver_history) {
-      // Process the data fields
-      const mecha_basic_processed = mecha.mecha_basic ? mecha.mecha_basic.split('\n') : [];
-      const driver_basic_processed = mecha.driver_basic ? mecha.driver_basic.split('\n') : [];
-      
-      // Create enhanced mecha object
-      const enhancedMecha = {
-        ...mecha,
-        mecha_basic_processed: mecha_basic_processed,
-        driver_basic_processed: driver_basic_processed,
-        // Ensure we keep essential display fields
-        image: mecha.image || '',
-      };
-      
-      setSelectedMecha(enhancedMecha);
-      setModalOpen(true);
-      setIsLoading(false);
-    }
-    // Check if we have preloaded data
-    else if (allMechaDetails[mecha.id]) {
-      setSelectedMecha(allMechaDetails[mecha.id]);
-      setModalOpen(true);
-      setIsLoading(false);
-    } else {
-      // If no preloaded data, fall back to the original method
-      fetchMechaDetails(mecha);
-    }
-  };
-
-  // 原来的获取详情方法，作为备用
-  const fetchMechaDetails = async (mecha: Mecha) => {
-    try {
-      setIsLoading(true);
-      
-      // API URL format exactly as provided in the requirement
-      const apiUrl = `https://www.mechabreak.com/api.php?op=search_api&action=get_article_detail&catid=${mecha.catid}&id=${mecha.id}&callback=_xfe26`;
-      
-      // Fetch data from API
-      const response = await fetch(apiUrl, {
-        headers: {
-          'Accept': 'application/json, text/javascript, */*; q=0.01',
-          'Referer': 'https://www.mechabreak.com/',
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-        }
-      });
-      
-      // Get the response text
-      const text = await response.text();
-      
-      // Parse JSONP response (format: _xfe26({...}))
-      const jsonStart = text.indexOf('(') + 1;
-      const jsonEnd = text.lastIndexOf(')');
-      
-      if (jsonStart > 0 && jsonEnd > jsonStart) {
-        const jsonString = text.substring(jsonStart, jsonEnd);
-        
-        try {
-          // Parse the extracted JSON
-          const data = JSON.parse(jsonString);
-          console.log('Parsed mecha details:', data);
-          
-          if (data && data.code === 1 && data.data && data.data.length > 0) {
-            const mechaData = data.data[0];
-            
-            // Process any multi-line text fields
-            const driver_basic = mechaData.driver_basic ? mechaData.driver_basic.split('\n') : [];
-            const mecha_basic = mechaData.mecha_basic ? mechaData.mecha_basic.split('\n') : [];
-            
-            // Create enhanced mecha object with API data
-            const enhancedMecha = {
-              ...mecha,
-              ...mechaData,
-              // Add processed data
-              driver_basic_processed: driver_basic,
-              mecha_basic_processed: mecha_basic,
-              // Ensure we keep essential display fields
-              image: mecha.image || '',
-              description: mechaData.description || mecha.description
-            };
-            
-            setMechaDetails(data);
-            setSelectedMecha(enhancedMecha);
-            setModalOpen(true);
-          } else {
-            console.error('API returned invalid data structure:', data);
-            // Fallback to local data
-            setSelectedMecha(mecha);
-            setModalOpen(true);
-          }
-        } catch (parseError) {
-          console.error('Error parsing JSON from API response:', parseError);
-          // Fallback to local data
-          setSelectedMecha(mecha);
-          setModalOpen(true);
-        }
-      } else {
-        console.error('Invalid JSONP format in API response');
-        // Fallback to local data
-        setSelectedMecha(mecha);
-        setModalOpen(true);
-      }
-      
-      setIsLoading(false);
-    } catch (error) {
-      console.error('Error fetching mecha details:', error);
-      // Fallback to local data if API fails
-      setSelectedMecha(mecha);
-      setModalOpen(true);
-      setIsLoading(false);
-    }
+    setSelectedMecha(enhancedMecha);
+    setModalOpen(true);
   };
 
   // Close modal function
@@ -557,7 +386,6 @@ export default function Strikers() {
     // Give time for close animation
     setTimeout(() => {
       setSelectedMecha(null);
-      setMechaDetails(null);
     }, 300);
   };
 
@@ -590,16 +418,7 @@ export default function Strikers() {
             </p>
           </div>
           
-          {/* 加载指示器 */}
-          {initialLoading && (
-            <div className="text-center py-8">
-              <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-blue-500 mx-auto mb-4"></div>
-              <p className="text-lg">Loading mecha data...</p>
-            </div>
-          )}
-          
           {/* Mecha Grid */}
-          {!initialLoading && (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {mechaData.map((mecha) => (
               <div 
@@ -607,12 +426,12 @@ export default function Strikers() {
                 className="striker-card cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20"
                 onClick={() => handleMechaSelect(mecha)}
               >
-                  <div className="relative overflow-hidden rounded-t-lg bg-slate-800" style={{ height: '400px', width: '180px', margin: '0 auto' }}>
+                <div className="relative overflow-hidden rounded-t-lg bg-slate-800" style={{ height: '400px', width: '180px', margin: '0 auto' }}>
                   <Image
-                      src={mecha.image || ''}
+                    src={mecha.image || ''}
                     alt={mecha.title}
-                      width={180}
-                      height={400}
+                    width={180}
+                    height={400}
                     className="object-cover w-full h-full transition-transform duration-500 hover:scale-110"
                     onError={(e) => {
                       // Fallback if image fails to load
@@ -622,21 +441,14 @@ export default function Strikers() {
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-70"></div>
-                    
-                    {/* 添加预加载指示标志 */}
-                    {allMechaDetails[mecha.id] && (
-                      <div className="absolute top-2 right-2 bg-green-500 rounded-full w-3 h-3" title="详细数据已加载"></div>
-                    )}
                 </div>
-                  <div className="p-4 bg-slate-800 rounded-b-lg" style={{ width: '180px', margin: '0 auto' }}>
+                <div className="p-4 bg-slate-800 rounded-b-lg" style={{ width: '180px', margin: '0 auto' }}>
                   <h3 className="striker-name">{mecha.title}</h3>
                   <p className="text-sm text-gray-300 mt-1">{mecha.key}</p>
                   
                   <div className="mt-3 flex justify-between items-center">
                     <span className="text-xs bg-blue-500 text-white px-2 py-1 rounded">
-                        {/* 优先使用预加载的驾驶员数据 */}
-                        {allMechaDetails[mecha.id]?.driver_name || 
-                         (mecha.pilot !== "Unknown" && mecha.pilot ? mecha.pilot : "No Pilot Data")}
+                      {mecha.pilot !== "Unknown" && mecha.pilot ? mecha.pilot : mecha.driver_name || "No Pilot Data"}
                     </span>
                     <button 
                       className="text-blue-400 hover:text-blue-300 text-sm flex items-center"
@@ -655,14 +467,6 @@ export default function Strikers() {
               </div>
             ))}
           </div>
-          )}
-          
-          {/* Loading overlay */}
-          {isLoading && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-              <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-blue-500"></div>
-            </div>
-          )}
           
           {/* Mecha Details Modal */}
           {modalOpen && selectedMecha && (
@@ -709,7 +513,7 @@ export default function Strikers() {
                       {selectedMecha.description && (
                         <div className="mb-6">
                           <h3 className="text-xl font-bold mb-3">Description</h3>
-                      <p className="text-lg">{selectedMecha.description}</p>
+                          <p className="text-lg">{selectedMecha.description}</p>
                         </div>
                       )}
                       
@@ -736,13 +540,13 @@ export default function Strikers() {
                         <div className="bg-slate-700 p-6 rounded-lg transition-transform hover:scale-[1.02]">
                           <h3 className="text-xl font-bold mb-4">Mecha History</h3>
                           <p className="text-lg whitespace-pre-line">{selectedMecha.mecha_history}</p>
-                    </div>
+                        </div>
                       )}
                     
                       {/* Weapons and Abilities */}
                       {(selectedMecha.weapon_1_desc || selectedMecha.weapon_2_desc || selectedMecha.weapon_3_desc || 
                         selectedMecha.weapon_4_desc || selectedMecha.weapon_5_desc) && (
-                      <div className="bg-slate-700 p-6 rounded-lg transition-transform hover:scale-[1.02]">
+                        <div className="bg-slate-700 p-6 rounded-lg transition-transform hover:scale-[1.02]">
                           <h3 className="text-xl font-bold mb-4">Weapons & Abilities</h3>
                           <div className="space-y-4">
                             {selectedMecha.weapon_1_desc && (
@@ -795,12 +599,12 @@ export default function Strikers() {
                               </div>
                             )}
                           </div>
-                      </div>
+                        </div>
                       )}
                       
                       {/* Pilot Information */}
                       {(selectedMecha.driver_name || selectedMecha.driver_basic || selectedMecha.driver_history) && (
-                      <div className="bg-slate-700 p-6 rounded-lg transition-transform hover:scale-[1.02]">
+                        <div className="bg-slate-700 p-6 rounded-lg transition-transform hover:scale-[1.02]">
                           <h3 className="text-xl font-bold mb-4">Pilot Information</h3>
                           
                           {/* Pilot Basic Info */}
@@ -816,8 +620,8 @@ export default function Strikers() {
                                     </div>
                                   );
                                 })}
-                      </div>
-                    </div>
+                              </div>
+                            </div>
                           )}
                           
                           {/* Pilot History */}
@@ -825,7 +629,7 @@ export default function Strikers() {
                             <div>
                               <h4 className="text-lg font-semibold text-yellow-400 mb-2">Background</h4>
                               <p className="text-base whitespace-pre-line">{selectedMecha.driver_history}</p>
-                    </div>
+                            </div>
                           )}
                           
                           {/* Pilot Introduction */}
@@ -835,10 +639,10 @@ export default function Strikers() {
                               <p className="text-base whitespace-pre-line">{selectedMecha.driver_introduction}</p>
                             </div>
                           )}
-                      </div>
+                        </div>
                       )}
                       
-                      {/* Combat Strategy - now using API data if available */}
+                      {/* Combat Strategy */}
                       <div className="bg-slate-700 p-6 rounded-lg transition-transform hover:scale-[1.02]">
                         <h3 className="text-xl font-bold mb-4">Combat Strategy</h3>
                         <p className="text-lg">
