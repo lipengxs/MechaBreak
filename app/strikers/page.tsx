@@ -437,7 +437,7 @@ export default function Strikers() {
                       // Fallback if image fails to load
                       const target = e.target as HTMLImageElement;
                       target.onerror = null;
-                      target.src = '/images/mecha_bg.jpeg';
+                      target.src = '/images/bg-b3150812.jpg.webp';
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-70"></div>

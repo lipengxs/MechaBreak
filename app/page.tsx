@@ -74,13 +74,14 @@ export default function Home() {
       <section className="relative h-screen">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/mecha_bg.jpeg"
+            src="/images/bg-b3150812.jpg.webp"
             alt="Mecha Break Background"
             fill
             priority
             style={{ objectFit: 'cover' }}
+            className="brightness-100"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/70 to-slate-900/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 to-slate-900/50"></div>
         </div>
         
         <div className="relative z-10 h-full container mx-auto px-4 flex flex-col items-center justify-center text-center">
@@ -370,7 +371,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Join the Battle?</h2>
           <p className="text-xl mb-8">Pre-register now to receive exclusive in-game items and early access to the upcoming beta test.</p>
-          <Link href="/register" className="btn-primary inline-block px-8 py-4 text-lg">
+          <Link href="https://mechabreak.seasungames.com/en/#/" target="_blank" className="btn-primary inline-block px-8 py-4 text-lg">
             Pre-Register Now
           </Link>
         </div>
