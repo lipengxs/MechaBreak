@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   title: 'Mecha Break - The Ultimate Mecha Combat Game',
   description: 'Mecha Break is an intense combat game featuring customizable mechas, strategic gameplay, and thrilling battles. Join the fight today!',
   keywords: 'Mecha Break, mecha game, robot combat, online multiplayer, PvP, mecha customization',
+  other: {
+    'msvalidate.01': 'B362957FC36C5EDDD6079B6D78330424',
+    'yandex-verification': '7c53f06929310092',
+  },
   openGraph: {
     title: 'Mecha Break - The Ultimate Mecha Combat Game',
     description: 'Mecha Break is an intense combat game featuring customizable mechas, strategic gameplay, and thrilling battles. Join the fight today!',
@@ -17,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'Mecha Break',
     images: [
       {
-        url: '/images/mecha-break-og.jpg',
+        url: '/images/bg-b3150812.jpg.webp',
         width: 1200,
         height: 630,
         alt: 'Mecha Break Game',
@@ -30,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Mecha Break - The Ultimate Mecha Combat Game',
     description: 'Mecha Break is an intense combat game featuring customizable mechas, strategic gameplay, and thrilling battles. Join the fight today!',
-    images: ['/images/mecha-break-twitter.jpg'],
+    images: ['/images/bg-b3150812.jpg.webp'],
   },
 };
 

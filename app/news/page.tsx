@@ -71,7 +71,7 @@ export default function News() {
               <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="relative h-64 md:h-auto">
                   <Image
-                    src="/images/featured-news.jpg"
+                    src="/images/media/featured-news.jpg"
                     alt="Mecha Break Global Launch"
                     fill
                     style={{ objectFit: 'cover' }}

@@ -247,7 +247,6 @@ export default function Airdrops() {
           {/* Airdrops Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredAirdrops.map((airdrop) => (
-              <Link href={`/guides/airdrops/${airdrop.id}`} key={airdrop.id}>
                 <div className="airdrop-card group bg-slate-800 rounded-lg overflow-hidden transition-transform hover:transform hover:scale-105">
                   <div className="relative h-48">
                     <Image
@@ -295,7 +294,6 @@ export default function Airdrops() {
                     </div>
                   </div>
                 </div>
-              </Link>
             ))}
           </div>
           

@@ -271,27 +271,6 @@ const mechaData: Mecha[] = [
     weapon_5_content: "The Juggernaut Charge System is the crown jewel of TRICERA's arsenal, representing the pinnacle of Salem Electric's impact weaponry research. When activated, specialized capacitors throughout the mecha's frame discharge simultaneously, providing an explosive burst of acceleration. Combined with the three reinforced horns that give TRICERA its name, this charge can penetrate even heavily armored targets. Thermal dissipation systems integrated into the frame convert excess heat generated during impact into additional power, allowing for sustained offensive operations."
   },
   {
-    id: "7",
-    catid: "1039",
-    title: "HARLEQUIN",
-    key: "HARLEQUIN",
-    image: "/images/mechas/harlequin.jpg",
-    thumb: "/images/mechas/harlequin.jpg",
-    description: "Harlequin is a versatile mecha that specializes in deception and fast-paced hit-and-run attacks.",
-    mecha_basic: "Model Number: DCL-H7\nManufacturer: Draco-Liaison Defense Industries\nHeight: 14.8 meters\nTare Weight: 31.2 tons\nGross Weight: 39.4 tons",
-    mecha_history: "HARLEQUIN was initially designed as an experimental mecha model focusing on speed and agility. Its unique systems incorporate advanced holographic technology and stealth capabilities that make it exceptional at infiltration and reconnaissance missions. When piloted by Protagonist, the mecha's capabilities were pushed to new limits, allowing for complex tactical maneuvers that confounded enemy forces. The mecha's distinct appearance and fighting style have made it a symbol of rebellion against conventional warfare tactics.",
-    weapon_1_desc: "Creates holographic duplicates that confuse enemies and draw their fire.",
-    weapon_1_content: "The Mirage System is HARLEQUIN's signature technology, capable of projecting up to six fully animated holographic duplicates that mimic the mecha's movements with near-perfect synchronization. These projections are enhanced with minor mass-emitters that allow them to trigger basic proximity sensors and appear solid on standard scanning equipment. Though they cannot cause damage, they effectively redirect enemy fire and create openings for strategic strikes. The system requires significant power and can only operate at full capacity for three minutes before requiring cooldown.",
-    weapon_2_desc: "A pair of energy blades that can be combined into a dual-edged staff.",
-    weapon_2_content: "The Twilight Blades are twin high-frequency energy weapons that serve as HARLEQUIN's primary close-combat armament. Each blade generates a focused plasma edge capable of cutting through reinforced armor plating. When combined into staff configuration, they create a devastating spinning attack pattern that few defense systems can withstand. The weapon's energy signature can be modulated to match environmental conditions, making them equally effective in space, atmospheric, or underwater combat scenarios.",
-    weapon_3_desc: "Shoulder-mounted missile launchers that fire tracking projectiles.",
-    weapon_3_content: "The Trickster Missile System consists of shoulder-mounted launchers containing sixteen miniaturized smart missiles. Unlike conventional ordinance, these missiles incorporate randomized flight patterns and can execute mid-air direction changes that make them extremely difficult to intercept. Each missile contains a small but potent explosive charge designed to target critical system junctions rather than cause widespread damage. The unpredictable nature of their attack vectors has earned them the nickname 'Joker's Deck' among veteran pilots.",
-    weapon_4_desc: "Releases a cloud of reflective particles that obscure vision and disrupt targeting systems.",
-    weapon_4_content: "The Masquerade Smoke Screen deploys a dense cloud of nanofabricated particles with reflective and signal-jamming properties. These particles not only obscure visual confirmation but actively interfere with radar, lidar, and infrared targeting systems. The screen can be programmed to form specific patterns or spread in predetermined directions based on environmental wind patterns. Advanced versions of this system incorporate hallucinogenic compounds that can affect enemy pilots who rely on direct visual contact through open cockpit designs.",
-    weapon_5_desc: "A rapid-fire energy weapon that delivers quick, precise shots.",
-    weapon_5_content: "The Jester's Pistol is a wrist-mounted energy weapon that sacrifices raw power for exceptional firing rate and precision. Capable of delivering up to seventy shots per second with pinpoint accuracy, it excels at targeting exposed joints, sensors, and weapon systems on enemy mechas. Though each individual shot causes minimal damage, their cumulative effect can systematically disable an opponent's capabilities. The weapon draws power directly from HARLEQUIN's main reactor, allowing for near-continuous operation without separate ammunition concerns."
-  },
-  {
     id: "6",
     catid: "1039",
     title: "PANTHER",

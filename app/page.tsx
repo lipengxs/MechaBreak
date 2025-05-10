@@ -147,7 +147,7 @@ export default function Home() {
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/images/screenshot-team.jpg"
+                src="/images/media/screenshot-team.jpg"
                 alt="Mecha Break Gameplay"
                 fill
                 style={{ objectFit: 'cover' }}
@@ -276,7 +276,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
-                src="/images/screenshot-neo-tokyo.jpg"
+                src="/images/media/screenshot-neo-tokyo.jpg"
                 alt="Neo Tokyo Map"
                 fill
                 style={{ objectFit: 'cover' }}
@@ -285,7 +285,7 @@ export default function Home() {
             </div>
             <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
-                src="/images/screenshot-falcon.jpg"
+                src="/images/media/screenshot-falcon.jpg"
                 alt="Falcon Striker"
                 fill
                 style={{ objectFit: 'cover' }}
@@ -294,7 +294,7 @@ export default function Home() {
             </div>
             <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
-                src="/images/screenshot-arctic.jpg"
+                src="/images/media/screenshot-arctic.jpg"
                 alt="Arctic Outpost Map"
                 fill
                 style={{ objectFit: 'cover' }}
@@ -303,7 +303,7 @@ export default function Home() {
             </div>
             <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
-                src="/images/screenshot-customization.jpg"
+                src="/images/media/screenshot-customization.jpg"
                 alt="Mecha Customization"
                 fill
                 style={{ objectFit: 'cover' }}
@@ -312,7 +312,7 @@ export default function Home() {
             </div>
             <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
-                src="/images/screenshot-orbital.jpg"
+                src="/images/media/screenshot-orbital.jpg"
                 alt="Orbital Station Map"
                 fill
                 style={{ objectFit: 'cover' }}
@@ -321,7 +321,7 @@ export default function Home() {
             </div>
             <div className="relative aspect-video rounded-lg overflow-hidden">
               <Image
-                src="/images/screenshot-airdrop.jpg"
+                src="/images/media/screenshot-airdrop.jpg"
                 alt="Airdrop Gameplay"
                 fill
                 style={{ objectFit: 'cover' }}
