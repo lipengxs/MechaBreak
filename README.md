@@ -1,81 +1,81 @@
 # Mecha Break Official Website
 
-This is the official website for Mecha Break, a revolutionary mecha combat game. The website is built using Next.js and Tailwind CSS.
+This is the official website repository for Mecha Break, a revolutionary mecha combat game that combines strategic team-based gameplay with intense mecha action.
 
-## Features
+## 🌟 About Mecha Break
 
-- Responsive design for all device sizes
-- Dynamic content with Next.js
-- Modern UI with Tailwind CSS
-- SEO optimized
+Mecha Break is an upcoming free-to-play mecha combat game that offers:
+- Deep mecha customization system
+- Team-based combat with various objectives
+- Dynamic weather system affecting gameplay
+- Destructible environments
+- Regular content updates with new maps, Strikers, and equipment
 
-## Pages
+## 🚀 Features
 
-- Home: Game introduction, trailer, features, and countdown timer
-- News: Latest updates and announcements
-- Guides:
-  - Strikers: Information about the various mechas in the game
-  - Airdrops: Details about in-game airdrops and their effects
-  - Maps: Comprehensive guides for all game maps
-- Media: Videos, screenshots, and artwork
-- Community: Fan creations and community content
+- **Cross-Platform Play**: Available on PC, PlayStation 5, Xbox Series X|S, and Nintendo Switch
+- **Multiple Languages**: Full support for English, Japanese, Korean, Chinese, Spanish, Portuguese, German, and French
+- **Ranked Matches**: Competitive ladder system with exclusive rewards
+- **Global Events**: Limited-time events with unique challenges and rewards
+- **Rich Lore**: Expansive universe with detailed storytelling
 
-## Getting Started
+## 🔗 Important Links
 
-### Prerequisites
+- [Official Website](https://mechabreak.org)
+- [Pre-Registration](https://mechabreak.seasungames.com/en/#/)
+- [Official Twitter](https://twitter.com/mechabreak)
+- [Discord Community](https://discord.gg/mechabreak)
+- [YouTube Channel](https://www.youtube.com/mechabreak)
 
-- Node.js 18.0.0 or later
-- npm or yarn
+## 🎮 Game Modes
 
-### Installation
+- **Team Battle**: 4v4 strategic combat
+- **Solo Mode**: 1v1 intense duels
+- **Special Events**: Unique game modes with special rules
+- **Training Ground**: Practice and master your skills
 
-1. Clone the repository:
-```bash
-git clone https://github.com/your-username/mechabreak.git
-cd mechabreak
-```
+## 🛠️ Technical Stack
 
-2. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-```
+- Next.js 13+
+- React
+- TypeScript
+- Tailwind CSS
+- Vercel Deployment
 
-3. Run the development server:
-```bash
-npm run dev
-# or
-yarn dev
-```
+## 📱 Social Media
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+Follow us on social media for the latest updates:
+- [Twitter](https://twitter.com/mechabreak)
+- [YouTube](https://www.youtube.com/mechabreak)
+- [Discord](https://discord.gg/mechabreak)
 
-## Building for Production
+## 🎁 Pre-Registration Benefits
 
-```bash
-npm run build
-# or
-yarn build
-```
+Pre-register now to receive:
+- Exclusive in-game items
+- Early access to the upcoming beta test
+- Special mecha skins
+- Unique pilot avatars
 
-Then, you can start the production server:
+## 📅 Release Date
 
-```bash
-npm run start
-# or
-yarn start
-```
+Mecha Break is scheduled for release in three months. Stay tuned to our official channels for the exact release date!
 
-## Technologies Used
+## 🎥 Media
 
-- [Next.js](https://nextjs.org/) - React framework for server-rendered applications
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript
-- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [Official Trailer](https://www.youtube.com/embed/0WTR4p7U040)
+- [Gameplay Preview](https://www.youtube.com/embed/QyCI80YKUkk)
+- [Developer Diary](https://www.youtube.com/embed/QyCI80YKUkk)
 
-## License
+## 🤝 Community
 
-All rights reserved. This project and its contents are proprietary and confidential.
+Join our growing community:
+- [Discord Server](https://discord.gg/mechabreak)
+- [Official Forums](https://mechabreak.org/forums)
+- [Reddit Community](https://reddit.com/r/mechabreak)
+
+## 📄 License
+
+© 2024 Mecha Break. All rights reserved.
 
 
