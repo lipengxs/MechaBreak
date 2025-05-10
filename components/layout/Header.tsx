@@ -45,7 +45,7 @@ const Header = () => {
                   <Link href="/guides/map" className="block px-4 py-2 text-sm text-white hover:bg-slate-700">
                     Map
                   </Link>
-                  <Link href="/strikers" className="block px-4 py-2 text-sm text-white hover:bg-slate-700">
+                  <Link href="/guides/strikers" className="block px-4 py-2 text-sm text-white hover:bg-slate-700">
                     Strikers
                   </Link>
                   <Link href="/guides/airdrops" className="block px-4 py-2 text-sm text-white hover:bg-slate-700">

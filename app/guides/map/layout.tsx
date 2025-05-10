@@ -30,4 +30,12 @@ export const metadata: Metadata = {
     'msvalidate.01': 'B362957FC36C5EDDD6079B6D78330424',
     'yandex-verification': '7c53f06929310092'
   }
-}; 
+};
+
+export default function MapLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return children;
+} 
