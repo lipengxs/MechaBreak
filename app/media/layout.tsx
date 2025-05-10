@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description: "Explore the visual world of Mecha Break through our collection of videos, screenshots, and artwork. Get a glimpse of the game's stunning visuals, intense combat, and unique mecha designs.",
     images: ['/images/bg-b3150812.jpg.webp'],
   },
+  alternates: {
+    canonical: 'https://mechabreak.org/media',
+  },
   other: {
     'msvalidate.01': 'B362957FC36C5EDDD6079B6D78330424',
     'yandex-verification': '7c53f06929310092'

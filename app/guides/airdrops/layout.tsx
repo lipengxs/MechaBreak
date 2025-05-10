@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description: 'Explore the various airdrops in Mecha Break, from powerful weapons to strategic utilities. Learn about their effects, rarities, and spawn locations.',
     images: ['/images/bg-b3150812.jpg.webp'],
   },
+  alternates: {
+    canonical: 'https://mechabreak.org/guides/airdrops',
+  },
   other: {
     'msvalidate.01': 'B362957FC36C5EDDD6079B6D78330424',
     'yandex-verification': '7c53f06929310092'

@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description: 'Explore the various Strikers in Mecha Break, each with unique abilities, stats, and playstyles. Find the perfect mecha for your combat strategy.',
     images: ['/images/bg-b3150812.jpg.webp'],
   },
+  alternates: {
+    canonical: 'https://mechabreak.org/guides/strikers',
+  },
   other: {
     'msvalidate.01': 'B362957FC36C5EDDD6079B6D78330424',
     'yandex-verification': '7c53f06929310092'

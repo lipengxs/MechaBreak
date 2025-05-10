@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description: 'Stay up to date with the latest news, updates, and announcements for Mecha Break. Get the newest information about game features, events, and community updates.',
     images: ['/images/bg-b3150812.jpg.webp'],
   },
+  alternates: {
+    canonical: 'https://mechabreak.org/news',
+  },
   other: {
     'msvalidate.01': 'B362957FC36C5EDDD6079B6D78330424',
     'yandex-verification': '7c53f06929310092'

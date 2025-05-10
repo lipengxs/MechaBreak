@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description: 'Explore the official battlefields of Mecha Break, from Cape Blanc Observatory to Gracelynn Skycity. Learn map features, strategic points, and tactical tips.',
     images: ['/images/bg-b3150812.jpg.webp'],
   },
+  alternates: {
+    canonical: 'https://mechabreak.org/guides/map',
+  },
   other: {
     'msvalidate.01': 'B362957FC36C5EDDD6079B6D78330424',
     'yandex-verification': '7c53f06929310092'

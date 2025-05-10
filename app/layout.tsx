@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     'msvalidate.01': 'B362957FC36C5EDDD6079B6D78330424',
     'yandex-verification': '7c53f06929310092',
   },
+  alternates: {
+    canonical: 'https://mechabreak.org',
+  },
   openGraph: {
     title: 'Mecha Break - The Ultimate Mecha Combat Game',
     description: 'Mecha Break is an intense combat game featuring customizable mechas, strategic gameplay, and thrilling battles. Join the fight today!',
