@@ -12,7 +12,7 @@ export default function TermsOfService() {
           
           <div className="prose prose-invert max-w-none">
             <p className="lead">
-              Last updated: March 15, 2024
+              Last updated: March 15, 2025
             </p>
 
             <h2>1. Acceptance of Terms</h2>

@@ -12,7 +12,7 @@ const Footer = () => {
               <span className="text-xl font-bold text-blue-400">MECHA BREAK</span>
             </Link>
             <p className="mt-4 text-sm text-gray-400">
-              © 2024 Mecha Break. All rights reserved.
+              © 2025 Mecha Break. All rights reserved.
             </p>
             <p className="mt-2 text-sm text-gray-400">
               Mecha Break is a thrilling battle royale game featuring customizable mechas and strategic combat.

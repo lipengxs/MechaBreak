@@ -14,7 +14,7 @@ const mediaData = {
       date: "October 15, 2023",
       thumbnail: "/images/media/video-thumbnail-trailer.jpg",
       embedUrl: "https://www.youtube.com/embed/ZOR6ig6GVMA?si=gh8QJuAH4HLjONgu",
-      description: "I dive into the Mecha BREAK Playtest on PC Auguest 2024. There are many different types of mechs, and Falcon is super fun to play. If you want fast pace game play, Flacon is the best for you."
+      description: "I dive into the Mecha BREAK Playtest on PC Auguest 2025. There are many different types of mechs, and Falcon is super fun to play. If you want fast pace game play, Flacon is the best for you."
     },
     {
       id: "gameplay-reveal",
@@ -35,7 +35,7 @@ const mediaData = {
     {
       id: "striker-showcase",
       title: "Striker Showcase - Meet the Mechas",
-      date: "January 20, 2024",
+      date: "January 20, 2025",
       thumbnail: "/images/media/video-thumbnail-strikers.jpg",
       embedUrl: "https://www.youtube.com/embed/QyCI80YKUkk?si=mZ5iOZWhFFdItjC5",
       description: "An in-depth look at the various Strikers (mechas) available in Mecha Break, detailing their unique abilities, strengths, and playstyles."
@@ -43,7 +43,7 @@ const mediaData = {
     {
       id: "map-overview",
       title: "Map Overview - Battlefields of Mecha Break",
-      date: "February 15, 2024",
+      date: "February 15, 2025",
       thumbnail: "/images/media/video-thumbnail-maps.jpg",
       embedUrl: "https://www.youtube.com/embed/QyCI80YKUkk?si=mZ5iOZWhFFdItjC5",
       description: "Explore the diverse maps of Mecha Break, from futuristic cities to orbital stations, each with unique features and strategic opportunities."
@@ -51,7 +51,7 @@ const mediaData = {
     {
       id: "beta-announcement",
       title: "Closed Beta Announcement",
-      date: "March 1, 2024",
+      date: "March 1, 2025",
       thumbnail: "/images/media/video-thumbnail-beta.jpg",
       embedUrl: "https://www.youtube.com/embed/QyCI80YKUkk?si=mZ5iOZWhFFdItjC5",
       description: "Exciting news about the upcoming closed beta test for Mecha Break, including details on how to participate and what to expect."
